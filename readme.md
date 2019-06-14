@@ -13,6 +13,17 @@ goroutine内存消耗测试  goroutine-benchmark
 闭包和goroutine常见错误避免 goroutine-and-closure/common-mistake-avoid  
 waitgroup helloworld wait-group/helloworld-waitgroup  
 waitgroup一般用法 wait-group/waitgroup-common-pattern  
+互斥锁 mutex/mutex  
+通道 channels/unbuffered  
+带缓冲的通道 channels/buffered  
+不安全的工作池 channels/simpleworkpoll/unsafe  
+安全的工作池 channels/simpleworkpoll/safe  
+select channels/select  
+select + 工作池 channels/selectjobqueue  
+通道的方向 channels/channeldirection  
+上下文 channels/context  
+带value的上下文 channels/contextwithvalue  
+多协程的上下文 channels/mutigoroutincontext  
 
 
 
