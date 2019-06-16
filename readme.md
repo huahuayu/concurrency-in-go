@@ -23,7 +23,11 @@ select + 工作池 channels/selectjobqueue
 通道的方向 channels/channeldirection  
 上下文 channels/context  
 带value的上下文 channels/contextwithvalue  
-多协程的上下文 channels/mutigoroutincontext  
+多协程的上下文 channels/mutigoroutincontext    
+综合示例：  
+模拟google搜索 googlesearch  
+
+
 
 
 
