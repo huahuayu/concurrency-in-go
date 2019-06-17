@@ -41,25 +41,11 @@ func TryEnqueue(job Job, jobChan chan<- Job) bool {
 	}
 }
 
-func WaitTimeout(wg *sync.WaitGroup, timeout time.Duration) bool {
-	ch := make(chan struct{})
-	go func() {
-		wg.Wait()
-		close(ch)
-	}()
-	select {
-	case <-ch:
-		return true
-	case <-time.After(timeout):
-		return false
-	}
-}
-
 func main() {
 	//runtime.GOMAXPROCS(runtime.NumCPU())
 
 	// make a channel with a capacity of 10.
-	jobChan := make(chan Job, 1000)
+	jobChan := make(chan Job, 10)
 
 	// start the worker
 	for i := 0; i < 10; i++ {
@@ -86,7 +72,6 @@ func main() {
 			workAssign++
 		}
 	}
-	WaitTimeout(&wg, 2*time.Second)
 	elapsed := time.Since(start)
 	fmt.Printf("%d work assigned, %d been done, in %s", workAssign, workDone, elapsed)
 }

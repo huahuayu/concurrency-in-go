@@ -44,7 +44,7 @@ func main() {
 
 	go func(wg *sync.WaitGroup, results chan int) {
 		fmt.Println("waiting")
-		wg.Wait()
+		wg.Wait() // GOOD
 		fmt.Println("done waiting")
 		close(results)
 	}(wg, results)
