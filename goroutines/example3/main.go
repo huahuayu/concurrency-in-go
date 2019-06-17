@@ -4,9 +4,9 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	sayHello := func() {
-		fmt.Println("hello from goroutin")
+		fmt.Println("hello from goroutine")
 	}
 
 	go sayHello()

@@ -2,21 +2,18 @@ package main
 
 import (
 	"fmt"
-	"sync"
+	"time"
 )
 
-func main(){
-	var wg sync.WaitGroup
+func main() {
 	for _, greeting := range []string{"hello", "greetings", "good day"} {
-		wg.Add(1)
 		go func() {
-			defer wg.Done()
 			fmt.Println(greeting)
 		}()
 	}
-	wg.Wait()
-}
 
+	time.Sleep(1 * time.Second)
+}
 
 /*
 output:

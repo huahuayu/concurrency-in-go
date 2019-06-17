@@ -2,21 +2,18 @@ package main
 
 import (
 	"fmt"
-	"sync"
+	"time"
 )
 
-func main(){
-	var wg sync.WaitGroup
+func main() {
 	for _, greeting := range []string{"hello", "greetings", "good day"} {
-		wg.Add(1)
-		go func(g string) {
-			defer wg.Done()
-			fmt.Println(g)
+		go func(words string) {
+			fmt.Println(words)
 		}(greeting)
 	}
-	wg.Wait()
-}
 
+	time.Sleep(1 * time.Second)
+}
 
 /*
 output:
@@ -24,5 +21,5 @@ good day
 greetings
 hello
 
-go func()匿名函数使用了传参的方式，这样三个goroutine各自有各自的
- */
+go func()匿名函数使用了传参的方式，这样三个goroutine各自有各自的本地变量
+*/
