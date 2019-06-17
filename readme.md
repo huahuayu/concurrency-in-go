@@ -5,15 +5,16 @@ goroutine与匿名函数 goroutines/example2
 竞态条件 race-condition/simplest-race-condition  
 数据锁 race-condition/data-access-lock  
 goroutine内存消耗测试  goroutine-benchmark  
-死锁 dead-lock  
-活锁 live-lock  
-饥饿 live-lock-starvation  
 闭包 goroutine-and-closure/simple-closure  
+闭包 goroutine-and-closure/fibonacci  
 闭包和goroutine常见错误 goroutine-and-closure/common-mistake  
 闭包和goroutine常见错误避免 goroutine-and-closure/common-mistake-avoid  
 waitgroup helloworld wait-group/helloworld-waitgroup  
 waitgroup一般用法 wait-group/waitgroup-common-pattern  
 互斥锁 mutex/mutex  
+死锁 dead-lock  
+活锁 live-lock  
+饥饿 live-lock-starvation 
 通道 channels/unbuffered  
 带缓冲的通道 channels/buffered  
 不安全的工作池 channels/simpleworkpoll/unsafe  
