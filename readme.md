@@ -9,6 +9,7 @@ goroutine内存消耗测试  goroutine-benchmark
 闭包 goroutine-and-closure/fibonacci  
 闭包和goroutine常见错误 goroutine-and-closure/common-mistake  
 闭包和goroutine常见错误避免 goroutine-and-closure/common-mistake-avoid  
+错误恢复 recover   
 waitgroup helloworld wait-group/helloworld-waitgroup  
 waitgroup一般用法 wait-group/waitgroup-common-pattern  
 互斥锁 mutex/mutex  
